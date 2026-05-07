@@ -15,3 +15,32 @@ const toggleBtn = document.querySelector("#toggle");
 heading.textContent = "Light & Dark Website"; 
 /* JS wrote HTML code!*/
 heading.style.color = "Hotpink"; //JS wrote CSS code
+
+// Define what happens button is clicked
+function toggleMode(){
+    console.log("triggered function");
+    // 1. Flip The boolean to reflect the mode
+    darkMode = !darkMode
+    console.log(darkMode);
+    //2. conditionally apply styles based on mode
+    if (darkMode == true) {
+    console.log("apply dark styles");
+    body.style.background = "rgb(255, 39, 133)";
+    heading.style.color = "rgb(255, 184, 216)";
+    description.style.color = "white";
+    description.textContent = "Welcome to the dark side🩷";
+    toggleBtn.textContent = "Switch to light";
+    toggleBtn.style.background = "rgb(255, 184, 222)";
+    }
+    else {
+    console.log("apply light styles)");
+    body.style.background = "white";
+    heading.style.color = "gold";
+    description.style.color = "black";
+    description.textContent = "Welcome to heaven👼🏾";
+    toggleBtn.textContent = "Switch to dark";
+    toggleBtn.style.background = "antiquewhite";
+    }
+}
+// to attach function to the the actual button
+toggleBtn.addEventListener("click",toggleMode);
