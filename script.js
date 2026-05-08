@@ -9,6 +9,7 @@ const body = document.querySelector("body");
 const heading = document.querySelector("#main-heading");
 const description = document.querySelector("#description");
 const toggleBtn = document.querySelector("#toggle");
+const image = document.querySelector("#image");
 // CONST is like LET, but the value won't chnage
 
 // JS can now change attributes and properties!
@@ -31,15 +32,17 @@ function toggleMode(){
     description.textContent = "Welcome to the dark side🩷";
     toggleBtn.textContent = "Switch to light";
     toggleBtn.style.background = "rgb(255, 184, 222)";
+    image.src = "hot_pink_hibiscus-removebg-preview.png";
     }
     else {
     console.log("apply light styles)");
-    body.style.background = "white";
-    heading.style.color = "gold";
-    description.style.color = "black";
+    body.style.background = "rgb(255, 184, 216)";
+    heading.style.color = "rgb(255,39,133)";
+    description.style.color = "rgb(255,39,134)";
     description.textContent = "Welcome to heaven👼🏾";
     toggleBtn.textContent = "Switch to dark";
     toggleBtn.style.background = "antiquewhite";
+    image.src = "light_pink_hisbiscus_flower-removebg-preview.png";
     }
 }
 // to attach function to the the actual button
