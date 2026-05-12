@@ -26,24 +26,50 @@ function toggleMode(){
     //2. conditionally apply styles based on mode
     if (darkMode == true) {
     console.log("apply dark styles");
-    body.style.background = "rgb(255, 39, 133)";
-    heading.style.color = "rgb(255, 184, 216)";
+    body.style.background = "rgb(117, 14, 0)";
+    heading.style.color = "rgb(255, 142, 67)";
     description.style.color = "white";
-    description.textContent = "Welcome to the dark side🩷";
-    toggleBtn.textContent = "Switch to light";
-    toggleBtn.style.background = "rgb(255, 184, 222)";
-    image.src = "hot_pink_hibiscus-removebg-preview.png";
+    description.textContent = "It's autumn!🍂";
+    toggleBtn.textContent = "Change Season";
+    toggleBtn.style.background = "rgb(255, 163, 70)";
+    image.src = "pumpkins-removebg-preview.png";
     }
     else {
     console.log("apply light styles)");
     body.style.background = "rgb(255, 184, 216)";
     heading.style.color = "rgb(255,39,133)";
     description.style.color = "rgb(255,39,134)";
-    description.textContent = "Welcome to heaven👼🏾";
-    toggleBtn.textContent = "Switch to dark";
+    description.textContent = "It's spring!🌸";
+    toggleBtn.textContent = "Change Season";
     toggleBtn.style.background = "antiquewhite";
     image.src = "light_pink_hisbiscus_flower-removebg-preview.png";
     }
 }
 // to attach function to the the actual button
 toggleBtn.addEventListener("click",toggleMode);
+
+// REVIEW
+// 1. Select an element to target (button)
+const hackerBtn = document.querySelector("#hacker");
+// 2. Attach a function to the button
+hackerBtn.addEventListener("click",setHacker);
+// 3. Define what happens when triggerred
+function setHacker(){
+    body.style.background = "black";
+    description.style.color = "rgb(106, 255, 0)";
+    body.style.fontFamily = "monospace";
+    description.textContent = "YOU GOT HACKED >:)"
+
+}
+
+const seasonBtn = document.querySelector("#season");
+// 2. Attach a function to the button
+hackerBtn.addEventListener("click",setHacker);
+// 3. Define what happens when triggerred
+function setHacker(){
+    body.style.background = "black";
+    description.style.color = "rgb(106, 255, 0)";
+    body.style.fontFamily = "monospace";
+    description.textContent = "It's summer!)"
+
+}
