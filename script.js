@@ -50,26 +50,29 @@ toggleBtn.addEventListener("click",toggleMode);
 
 // REVIEW
 // 1. Select an element to target (button)
-const hackerBtn = document.querySelector("#hacker");
+const TornadoBtn = document.querySelector("#Tornado");
 // 2. Attach a function to the button
-hackerBtn.addEventListener("click",setHacker);
+TornadoBtn.addEventListener("click",setTornado);
 // 3. Define what happens when triggerred
-function setHacker(){
+function setTornado(){
     body.style.background = "black";
     description.style.color = "rgb(106, 255, 0)";
     body.style.fontFamily = "monospace";
-    description.textContent = "YOU GOT HACKED >:)"
+    description.textContent = "IT'S A TORNADO!"
+    image.src = "tornado-removebg-preview.png";
+    toggleBtn.style.background = "grey";
 
 }
 
-const seasonBtn = document.querySelector("#season");
+const seasonBtn = document.querySelector("#Season");
 // 2. Attach a function to the button
-hackerBtn.addEventListener("click",setHacker);
+seasonBtn.addEventListener("click",setSeason);
 // 3. Define what happens when triggerred
-function setHacker(){
+function setSeason(){
     body.style.background = "black";
     description.style.color = "rgb(106, 255, 0)";
     body.style.fontFamily = "monospace";
     description.textContent = "It's summer!)"
 
 }
+
